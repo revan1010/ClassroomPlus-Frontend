@@ -1,0 +1,587 @@
+@import "~antd/dist/antd.dark.css";
+:root {
+  --primaryText: #ffffff;
+  /* --primaryBackground: #fff; */
+  --primaryBackground: #0d1117;
+
+  --secondaryText: #ffffff;
+  --secondaryBackground: #4949d6;
+
+  --tertiaryText: #ffffff;
+  --tertiaryBackground: #da0066;
+
+  --loadingColor: #e9412b;
+
+  --success: #46ed1c;
+  --error: #ff1c03;
+
+  --publicRoom: #1eff44;
+  --privateRoom: #f6fa11;
+  --hiddenRoom: #000000;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primaryBackground) !important;
+  height: 100%;
+  /* overflow: hidden; */
+  margin: 0;
+  color: var(--primaryText);
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7a7a7a;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+/* Login Page Classess */
+
+.VerifyEmail-outer-div {
+  text-align: center;
+  padding: 20px 5px 0px 5px;
+  position: relative;
+}
+
+.VerifyEmail-heading-div {
+  color: var(--primaryText);
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.verifyEmail-status-div {
+  color: var(--primaryText);
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+/* Login Page Classess */
+
+.login-outer-div {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-header-div {
+  font-size: 40px;
+  color: var(--primaryText);
+  margin: 10px 0px 20px 0px;
+}
+
+.login-form {
+  color: white;
+  padding-top: 30px;
+}
+
+/*Navbar Classes*/
+
+.navbar-outer-div {
+  display: inline-flex;
+  justify-content: space-between;
+  flex: 0 1 auto;
+  width: 100%;
+  height: 62px;
+  padding: 10px;
+  border-bottom: 2px solid var(--primaryText);
+  /* webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+    box-shadow: 1px 1px 3px 1px #FFFFFF; */
+}
+
+/* .navbar-drawer-icons{
+	font-size: 20px;
+} */
+
+.navbar-drawer-item {
+  font-size: 15px !important;
+}
+
+/* Using direct className for sum menu..... modifying it (Danger) */
+.ant-menu-sub {
+  background-color: var(--primaryBackground) !important;
+}
+
+/* 
+.ant-menu > .ant-menu-item:hover,
+.ant-menu > .ant-menu-submenu:hover,
+.ant-menu > .ant-menu-item-active,
+.ant-menu> .ant-menu-submenu-active,
+.ant-menu > .ant-menu-item-open,
+.ant-menu> .ant-menu-submenu-open,
+.ant-menu > .ant-menu-item-selected,
+.ant-menu > .ant-menu-submenu-selected {
+  color: red;
+  border-bottom: 2px solid red;
+} 
+*/
+
+/* Signup Page Classess */
+
+.signup-outer-div {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-header-div {
+  font-size: 40px;
+  color: var(--primaryText);
+  margin: 10px 0px 20px 0px;
+  padding: 10px;
+}
+
+.signup-input-sameline {
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+  justify-content: space-between;
+}
+
+/* Mansory Grid classess */
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -20px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 20px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 30px;
+}
+
+/* My Rooms Classess */
+
+.myRooms-outer-div {
+  margin: 20px 20px;
+  padding: 0px 20px;
+  height: 100%;
+}
+
+.myRooms-header {
+  align-items: center;
+  text-align: left;
+  font-size: 30px;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.myRooms-createNew-button {
+  cursor: pointer;
+  border: 2px solid var(--secondaryText);
+  font-size: 20px;
+  background-color: var(--secondaryBackground);
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.myRooms-cards-outer {
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.myRooms-cards-box {
+  background-color: var(--secondaryBackground);
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+  display: inline-table;
+  min-width: 330px;
+  max-width: 400px;
+  margin: 20px;
+  cursor: pointer;
+  animation: fadeIn 0.5s 1;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.myRooms-cards-box:hover {
+  border-radius: 10px;
+  transition: transform 0.5s;
+  transform: scale(1.02);
+}
+
+.myRooms-cards-info {
+  padding: 3px 5px 10px 5px;
+  width: 100%;
+}
+
+.myRooms-cards-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--secondaryText);
+  letter-spacing: 1px;
+  padding: 10px 5px;
+  text-align: center;
+  /* width: 100%;
+	display: inline-flex; */
+  align-items: center;
+}
+
+.myRooms-cards-description {
+  font-size: 18px;
+  font-family: "Muli", sans-serif;
+  color: var(--secondaryText);
+  padding: 4px 10px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.myRooms-card-bottom-bar {
+  width: 100%;
+  padding: 0px 20px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  max-height: 30px;
+}
+
+.myRooms-room-visibility {
+  border-radius: 20px;
+  border: 3px solid var(--hiddenRoom);
+  color: var(--hiddenRoom);
+  position: relative;
+  width: 100px;
+  min-width: 100px;
+  max-height: 30px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.myRooms-public-room {
+  color: var(--publicRoom);
+  border: 3px solid var(--publicRoom);
+}
+
+.myRooms-private-room {
+  color: var(--privateRoom);
+  border: 3px solid var(--privateRoom);
+}
+
+.myRooms-hidden-room {
+  color: var(--hiddenRoom);
+  border: 3px solid var(--hiddenRoom);
+}
+
+.questions-submitted-div {
+  width: 18px;
+  height: 18px;
+  background: var(--success);
+  border-radius: 10px;
+}
+.questions-remaining-div {
+  width: 18px;
+  height: 18px;
+  background: var(--error);
+  border-radius: 10px;
+}
+
+.myRooms-cards-buttons {
+  background-color: var(--primaryBackground);
+  color: var(--primaryText);
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 18px;
+  height: 100%;
+  padding: 4px 15px;
+}
+
+/* Room Settings */
+
+.ant-modal-content {
+  background-color: var(--primaryBackground);
+}
+.ant-modal-header {
+  background-color: var(--primaryBackground);
+}
+
+/*  */
+
+.Resizer {
+  background: var(--primaryText);
+  /* opacity: 0.2; */
+  z-index: 1;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.Resizer:hover {
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Resizer.horizontal {
+  height: 11px;
+  margin: -5px 0;
+  border-top: 5px solid rgba(255, 255, 255, 0);
+  border-bottom: 5px solid rgba(255, 255, 255, 0);
+  cursor: row-resize;
+  width: 100%;
+}
+
+.Resizer.horizontal:hover {
+  border-top: 5px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.Resizer.vertical {
+  width: 16px;
+  margin: 0 -5px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+  border-right: 5px solid rgba(255, 255, 255, 0);
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  border-left: 5px solid rgba(0, 0, 0, 0.5);
+  border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.code-editor-nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #363837;
+}
+
+/* Questions Css */
+
+.outer-scroll-div {
+  margin: 0 auto;
+  position: absolute;
+  /* height: 500px; */
+  width: 100%;
+  /* height: 100%; */
+  overflow: auto;
+  padding: 0px 0px 150px 0px;
+  /* height: min-content; */
+  /* height: 500px; */
+  /* overflow-x: hidden;
+	overflow-y: auto; */
+}
+
+.question-title {
+  background-color: var(--primaryBackground);
+  border: none;
+  border-bottom: 2px solid var(--primaryText);
+  color: var(--secondaryBackground);
+  font-size: 30px;
+  font-weight: bolder;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-title:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--primaryText);
+}
+
+.question-sample-case-outer {
+  margin: 10px 10px;
+  /* background-color: #e9412b; */
+}
+
+.question-sample-case-title {
+  text-align: left;
+}
+
+.question-sample-case-input {
+  /* background-color: var(--secondaryBackground); */
+  padding: 4px;
+  /* margin: 4px 10px; */
+  background-color: #1e1e1e;
+  width: 100%;
+  color: var(--primaryText);
+  /* height: 120px; */
+  text-align: left;
+}
+
+.code-editor-nav {
+  background-color: var(--primaryBackground);
+  width: 100%;
+  border-bottom: 2px solid var(--primaryText);
+  margin-bottom: 4px;
+}
+
+.playground-saved-codes {
+  background-color: var(--secondaryBackground);
+  border-radius: 6px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  width: fit-content;
+  width: 310px;
+  margin: 10px;
+  cursor: pointer;
+  animation: fadeIn 0.5s 1;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.playground-saved-codes-inner {
+  /* padding: 0px 20px; */
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.playground-code-title {
+  font-size: 30px;
+  color: var(--secondaryBackground);
+  font-weight: bolder;
+}
+
+.code-editor-input-textarea {
+  width: 100%;
+  height: 100%;
+  background: var(--primaryBackground);
+  border: none;
+  border: none;
+  overflow: auto;
+  outline: none;
+  max-height: 210px;
+  /* border-top: 2px solid var(--primaryText); */
+}
+
+.code-editor-input-title {
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primaryText);
+}
+
+.document-container {
+  color: black;
+  text-align: left;
+}
+
+.pg-viewer-wrapper {
+  margin-bottom: 200px;
+}
+
+.pg-viewer-container {
+  margin-bottom: 200px;
+}
+
+.ant-upload-list-item {
+  margin-top: 0px;
+  padding: 0px;
+  display: inline-flex;
+  /* align-items:flex-end; */
+  animation: none;
+  height: auto;
+  margin-left: 20px;
+}
+
+.upload-list-inline {
+  margin: 0px 20px;
+  width: 100%;
+  /* border: 2px solid pink; */
+  display: inline-flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.pdf-controlls-container {
+  height: 30px;
+}
+
+.pdf-viewer {
+  padding: 0px 0px 200px 0px;
+}
+/* About us css*/
+.aboutus-outer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.aboutus-inner {
+  max-width: 800px;
+}
+.aboutus-img {
+  border-radius: 8px;
+  width: 200px;
+}
+.aboutus-title {
+  color: var(--secondaryBackground);
+  font-size: 55px;
+  text-align: center;
+}
+.aboutus-cards {
+  margin: 20px 0px 40px 0px;
+  display: inline-table;
+  margin: 20px 40px;
+  /* flex-flow: row; */
+  /* justify-content: space-between; */
+  /* flex-direction: row; */
+  column-gap: 100px;
+}
+.aboutus-content {
+  font-size: 25px;
+  text-align: left;
+  margin-left: 50px;
+}
+.aboutus-list {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.aboutus-card-icons {
+  font-size: 20px;
+}
