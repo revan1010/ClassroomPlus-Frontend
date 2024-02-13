@@ -16,25 +16,32 @@ Version Control: Git
 ## Screenshots:
 
 ### Login page
-![Alt Text](login/login.png)
+![Alt Text](Images/login.png)
+
 
 ### Classroom List page
-![Classroom List page](classrooms/rooms.png)
+![Classroom List page](Images/rooms.png)
+
 
 ### Assignment Status page
 ![Questions page](Images/questions.png)
 
+
 ### Code Editor page
 ![Alt Text](Images/codeEditor.png)
+
 
 ### Setting coding assignment page
 ![Alt Text](Images/Codeset.png)
 
+
 ### File type assignment submission page
 ![Alt Text](Images/fileSubmission.png)
 
+
 ### Account type page
 ![Alt Text](Images/AccTypes.png)
+
 
 ### Coding Assignment Submission page
 ![Alt Text](Images/submissions.png)
